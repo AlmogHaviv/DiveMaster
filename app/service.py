@@ -1,4 +1,4 @@
-from db import maindb
+from dbbob import maindb
 
 def create_new_diving_site():
     client = maindb.get_database('test')

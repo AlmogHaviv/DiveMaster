@@ -13,9 +13,8 @@ def insert_data_to_collection(database_name='test', collection_name='dive-site')
    # Get the given collection
    users = db[collection_name]
    # Insert a single document
-   result = users.insert_one([
+   result = users.insert_one(
       {
-         "id": "string",
          "name": "string",
          "min_temperature": 3.12,
          "max_temperature": 3.14,
@@ -32,8 +31,10 @@ def insert_data_to_collection(database_name='test', collection_name='dive-site')
          ],
          "max_depth": 23,
          "diving_time": 35,
-         "short_description": "string"
+         "short_description": "string",
       }
-   ])
-   print(result.__inserted_id)
+   )
+   print(result.inserted_id)
+
+
 
